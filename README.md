@@ -281,8 +281,8 @@ This finding motivated a **stratified seasonal train/val/test split** to ensure 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/snehatrivedi019/Downscaling-of-satellite-based-air-quality-map.git
-cd Downscaling-of-satellite-based-air-quality-map
+git https://github.com/yash16trivedi16-cell/satellite-based-air-quality-downscaling.git
+cd satellite-based-air-quality-downscaling
 ```
 
 ### 2. Set Up Environment
