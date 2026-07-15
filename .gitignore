@@ -1,0 +1,19 @@
+# Large data files
+data/raw/*.tif
+data/raw/*.gpkg
+data/processed/*.csv
+
+# Model files
+outputs/*.keras
+outputs/*.h5
+
+# Cache
+cache/
+.json
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
