@@ -6,6 +6,7 @@
 
 ## 📌 Table of Contents
 
+- [Live Demo](#live-demo)
 - [Project Overview](#project-overview)
 - [Problem Statement](#problem-statement)
 - [Research Question](#research-question)
@@ -18,6 +19,14 @@
 - [How to Run](#how-to-run)
 - [Requirements](#requirements)
 - [Future Work](#future-work)
+
+---
+
+## 🚀 Live Demo
+
+Explore the interactive dashboard here: **[Live App →](https://satellite-based-air-quality-downscaling-fhykhcj7axtlxccdqbqhzb.streamlit.app/)**
+
+The dashboard includes 6 pages — Overview, Dataset & Pipeline, Models & Results, Final NO₂ Map, Key Learnings, and About & Links — with interactive Plotly charts and the final high-resolution Delhi NO₂ map.
 
 ---
 
@@ -217,9 +226,9 @@ Best epoch: 39
 
 | Model | Val R² | Test R² | Verdict |
 |---|---|---|---|
-| **U-Net v2** | **0.9013** | **0.9342** | **Best overall** 🏆 |
+| **U-Net v2** | **0.9013** | **0.9284** | **Best overall** 🏆 |
 
-> The U-Net v2 achieved **R² = 0.9342 on completely unseen test data** — meaning the model explains 93.42% of NO₂ variation across Delhi. The test score being higher than validation is attributed to the test months (August, December) having stronger seasonal pollution signals than validation months (May, November).
+> The U-Net v2 achieved **R² = 0.9284 on completely unseen test data** — meaning the model explains 92.84% of NO₂ variation across Delhi. The test score being higher than validation is attributed to the test months (August, December) having stronger seasonal pollution signals than validation months (May, November).
 
 ### Feature Importance (XGBoost v2)
 
@@ -281,8 +290,8 @@ This finding motivated a **stratified seasonal train/val/test split** to ensure 
 ### 1. Clone the Repository
 
 ```bash
-git https://github.com/yash16trivedi16-cell/satellite-based-air-quality-downscaling.git
-cd satellite-based-air-quality-downscaling
+git clone https://github.com/sneha-trivedii/Downscaling-of-satellite-based-air-quality-map.git
+cd Downscaling-of-satellite-based-air-quality-map
 ```
 
 ### 2. Set Up Environment
@@ -314,6 +323,10 @@ ee.Initialize(project='your-gee-project-id')
 ```
 
 > **Note:** Raw data files (`.tif`, `.gpkg`) are excluded from version control due to size. Run notebooks 01–02 to regenerate them.
+
+### 5. Or Just Try the Live Demo
+
+No setup needed — explore the results directly: **[Live App →](https://satellite-based-air-quality-downscaling-fhykhcj7axtlxccdqbqhzb.streamlit.app/)**
 
 ---
 
@@ -350,7 +363,7 @@ earthengine-api ≥0.1.370
 - Higher resolution auxiliary data (building footprints, traffic counts)
 
 **Deployment:**
-- Streamlit dashboard for interactive Delhi NO₂ visualization
+- ~~Streamlit dashboard for interactive Delhi NO₂ visualization~~ ✅ **Live:** [satellite-based-air-quality-downscaling-fhykhcj7axtlxccdqbqhzb.streamlit.app](https://satellite-based-air-quality-downscaling-fhykhcj7axtlxccdqbqhzb.streamlit.app/)
 - Automated monthly pipeline to generate fresh maps from new TROPOMI data
 - Export final maps as GeoTIFF for use in QGIS and Google Earth Engine
 
